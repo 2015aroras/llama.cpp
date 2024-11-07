@@ -14491,7 +14491,7 @@ struct llm_build_context {
             cb(ffn_inp, "ffn_inp", il);
 
             // feed-forward network
-            cur = llm_build_ffn(ctx0, lctx, cur,
+            cur = llm_build_ffn(ctx0, lctx, ffn_inp,
                     model.layers[il].ffn_up,   NULL, NULL,
                     model.layers[il].ffn_gate, NULL, NULL,
                     model.layers[il].ffn_down, NULL, NULL,
