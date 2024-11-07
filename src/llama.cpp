@@ -14430,6 +14430,8 @@ struct llm_build_context {
         for (int il = 0; il < n_layer; ++il) {
             struct ggml_tensor * inpSA = inpL;
 
+            cur = inpL;
+
             // self_attention
             {
                 // compute Q and K and RoPE them
