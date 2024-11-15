@@ -5835,7 +5835,9 @@ static void llm_load_hparams(
                 ml.get_key(LLM_KV_ATTENTION_LAYERNORM_RMS_EPS, hparams.f_norm_rms_eps);
 
                 switch (hparams.n_layer) {
+                    case 16: model.type = e_model::MODEL_1B; break;
                     case 32: model.type = e_model::MODEL_7B; break;
+                    case 40: model.type = e_model::MODEL_13B; break;
                     default: model.type = e_model::MODEL_UNKNOWN;
                 }
             } break;
